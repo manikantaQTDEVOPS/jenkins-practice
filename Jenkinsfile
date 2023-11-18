@@ -1,16 +1,18 @@
-pipeline { 
-  agent any
-  options {
-      // timeout counter starts after agent is allocated
-      timeout(time: 1, unit: 'SECONDS')
+pipeline {
+  // agent is allocated in the stage      
+      agent none
+      stages {
+            stage('Example') {
+                  agent any 
+                   options {
+                        // timeout counter starts before agent is allocated
+                        timeout(time: 10, unit: 'SECONDS')
+                   }
+                   steps {
+                        echo 'Hello-Worid'
+                   }
+                  
 
-  }
-  stages {
-      stage('Example') {
-            steps {
-                  echo 'Hello-World'
+                  }
             }
       }
-  }
-
-}
