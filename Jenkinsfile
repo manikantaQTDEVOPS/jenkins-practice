@@ -16,6 +16,11 @@ pipeline {
                   echo 'Hello-World'
             }
       }
+      stage( 'params stage') {
+            steps {
+                  echo "Hello ${params.PERSON}"
+            }
+      }
      } 
 
      //post section in the pipeline
