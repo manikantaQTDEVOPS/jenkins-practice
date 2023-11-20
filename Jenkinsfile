@@ -12,4 +12,20 @@ pipeline {
             }
       }
      } 
+
+     //post section in the pipeline
+     post {
+      success {
+            echo 'pipeline success'
+            // when the pipeline success print the success msg    
+      }
+      failure {
+            echo 'pipeline failure'
+            // when the pipeline failure print the failre msg
+      }
+      always {
+            echo 'success or failure'
+            // when the pipeline success or failure print the always msg
+      }
+     }
 }
