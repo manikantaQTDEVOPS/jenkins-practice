@@ -5,6 +5,10 @@ pipeline {
       // cancel the build if there is any problem after 10 minutes
       timeout(time: 10, unit: 'MINUTES')
  }
+
+    parameters {
+       string( name: 'PERSON' , defaultVlaue: 'MANIKANTA')
+    }
      stages {
       stage('Example') {
             steps {
