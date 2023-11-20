@@ -8,7 +8,7 @@ pipeline {
   //added the pipeline owner in the parameters block
 
     parameters {
-       string( name: 'PERSON' , defaultVlaue: 'MANIKANTA')
+       string( name: 'PERSON' , defaultValue: 'MANIKANTA')
     }
      stages {
       stage('Example') {
