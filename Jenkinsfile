@@ -33,9 +33,6 @@ pipeline {
             echo 'pipeline failure'
             // when the pipeline failure print the failre msg
       }
-      // always {
-      //       echo 'success or failure'
-      //       // when the pipeline success or failure print the always msg
-      // }
+      
      }
 }
